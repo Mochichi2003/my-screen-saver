@@ -1,13 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/dayjs"></script>
+  <script src="https://unpkg.com/dayjs@1.7.7/locale/ja.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;867;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-container">
+
+    <h1>Mochi's Macbook pro</h1>
+    <!-- <h2 id="clocks">2020/09/29 15:00:00</h2> -->
+    <h2 id="view_time"></h2>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById("view_time").innerHTML = getNow();
+    // setInterval(getNow(), 10);
+    setInterval(() => {
+      document.getElementById("view_time").innerHTML = getNow();
+
+    }, 10);
+    function getNow() {
+      var now = new Date();
+      var year = now.getFullYear();
+      var mon = now.getMonth() + 1; //１を足すこと
+      var day = now.getDate();
+      var hour = now.getHours();
+      var min = now.getMinutes();
+      var sec = now.getSeconds();
+
+      //出力用
+      var s = year + "/" + mon + "/" + day + " " + hour + ":" + min + ":" + sec + "";
+      return s;
+    }
+  </script>
+</body>
+
+<script>
+
+</script>
 
 <style>
-h1 {
-  color: black;
-  background: white;
-  font-size: 30vh;
-  animation: blink 1s step-end infinite;
-}
-@keyframes blink {
-  75% { opacity: 0.0; }
-}
+  body {
+    /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+    font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+      "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+      "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: 900;
+    /* font-size: 70px; */
+    background: #010101;
+    color: #ffffff;
+  }
+
+  .main-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    margin: 0;
+    font-size: 2rem;
+    /* filter: drop-shadow(0px 0px 140px #ffffff); */
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+  }
+
+  .main-container * {
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+  }
 </style>
-<h1>Hello World</h1>
+
+</html>
