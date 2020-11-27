@@ -14,9 +14,9 @@
 <body>
   <div class="main-container">
 
-    <h1>Mochi's Macbook pro</h1>
-    <!-- <h2 id="clocks">2020/09/29 15:00:00</h2> -->
-    <h2 id="view_time"></h2>
+    <!-- <h1>Mochi's MacBook Pro</h1> -->
+    <!-- <h2 id = "clocks">2020/09/29 15:00:00</h2> -->
+    <h1 id="view_time"></h1>
   </div>
 
   <script type="text/javascript">
@@ -29,7 +29,7 @@
     function getNow() {
       var now = new Date();
       var year = now.getFullYear();
-      var mon = now.getMonth() + 1; //１を足すこと
+      var mon = now.getMonth() + 1;  //１を足すこと
       var day = now.getDate();
       var hour = now.getHours();
       var min = now.getMinutes();
@@ -42,20 +42,21 @@
   </script>
 </body>
 
+
 <script>
 
 </script>
 
 <style>
   body {
-    /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
-    font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+
+    font-family: "Inter", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
       "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
       "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-weight: 900;
     /* font-size: 70px; */
-    background: #010101;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000;
   }
 
   .main-container {
@@ -75,12 +76,17 @@
     margin-bottom: 0px;
     margin-top: 0px;
 
+
+  }
+
+  h1 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
 
   .rl-list-item {
     background: #010101 !important;
-    outline: #777 1px solid!important;
+    outline: #777 1px solid !important;
   }
 </style>
 
